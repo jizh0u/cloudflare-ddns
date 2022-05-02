@@ -85,8 +85,7 @@ class CloudflareUpdater:
             if response.ok and response.json()['success']:
                 logging.info('Update successfully!')
             else:
-                logging.warn('Failed to update: %s', response.text)
-                logging.warn(response.request.headers)
+                logging.warning('Failed to update: %s', response.text)
 
         else:
             logging.info('Skip updating because the existing DNS record is up-to-date...')
@@ -98,7 +97,7 @@ class CloudflareUpdater:
             if response.ok and response.json()['success']:
                 logging.info('Create successfully!')
             else:
-                logging.warn('Failed to create: %s', response.text)
+                logging.warning('Failed to create: %s', response.text)
 
 
     def update(self) -> None:

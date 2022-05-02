@@ -1,0 +1,11 @@
+{
+  "api_token": "Your Cloudflare token.",
+  "zone_id": "Your Zone id",
+  "domain": "Your full domain",
+  "proxied": false,
+
+  "update_ipv4": true,
+  "update_ipv6": false,
+
+  "update_interval_mins": 15
+}
